@@ -80,8 +80,12 @@ ul {
 }
 
 ul.character-detail {
-  li a{
-    display: flex;
+  > li {
+    width: 100%;
+
+    a{
+      display: flex;
+    }
   }
 
   div.character-name h2 {
@@ -95,6 +99,9 @@ ul.character-detail {
 
 .search-wrapper {
   display: flex;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 
   .search-label,
   .search-input,
@@ -133,4 +140,18 @@ button {
   left: 48%;
   width: 200px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 756px) {
+  .character-list > li {
+    width: 100%;
+  }
+
+  .search-wrapper {
+    .search-label,
+    .search-input {
+      margin: 5px 10px;
+      width: 90%;
+    }
+  }
 }
